@@ -1,0 +1,22 @@
+{
+  "name": "my-test-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+    "fetch": "node fetcher.ts",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.81.5",
+    "axios": "^1.6.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.2"
+  }
+}
