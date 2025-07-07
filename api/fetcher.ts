@@ -1,16 +1,14 @@
 import axios from 'axios';
-import type { AxiosResponse } from 'axios'; // ✅ 타입 전용으로만 import
+import type { AxiosResponse } from 'axios';
 
 const instance = axios.create({
-  // baseURL: '',
   baseURL: 'https://jsonplaceholder.typicode.com',
-  timeout: 3000, // 300ms는 너무 짧으니 3초로 늘림
+  timeout: 3000,
 });
 
 // 인터셉터: 응답 데이터 콘솔 출력
 instance.interceptors.response.use(
   (response) => {
-    // console.log('📦 인터셉터에서 로깅:', response.data);
     return responseWrapper(response);
   },
   (error) => {

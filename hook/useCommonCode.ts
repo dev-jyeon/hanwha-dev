@@ -1,12 +1,6 @@
 import { useQueries } from '@tanstack/react-query';
 import apiClient from '../api/apiClient.ts';
 
-// type CommonCodeMap = {
-//   [key: string]: string;
-// };
-// queries: Object.entries(codeMap).map(([key, url]) => ({
-
-// 이미라 책임 요구사항 Promise.all 처리 부탁
 export function useCallCommonCode(codeMap: string[]) {
   const queryResults = useQueries({
     queries: codeMap.map((key) => ({
