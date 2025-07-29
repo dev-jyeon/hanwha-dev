@@ -1,4 +1,4 @@
-import instance from './fetcher.ts'; // Axios instance
+import instance from './fetcher';
 
 export type ApiResponse<T> = {
   data: T;

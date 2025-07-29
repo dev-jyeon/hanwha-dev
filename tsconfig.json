@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    "strict": true
+    // "noUnusedLocals": true
+  }
+}
