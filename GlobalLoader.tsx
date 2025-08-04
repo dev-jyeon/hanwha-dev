@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { useLoading } from './hook/useLoading';
+import { useLoading } from '@/hook/useLoading';
+import type { ReactNode } from 'react';
 
 interface GlobalLoaderProps {
   children: ReactNode;
