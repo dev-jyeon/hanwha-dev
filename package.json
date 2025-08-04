@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node index.js",
     "fetch": "node fetcher.ts",
-    "dev": "vite"
+    "dev": "vite",
+    "build": "tsc -b && vite build"
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.13.5",
