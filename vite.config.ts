@@ -13,6 +13,14 @@ export default defineConfig(({ mode }) => {
         },
       }),
     ],
+    server: {
+      port: 8080,
+      proxy: {
+        '/api': {
+          target: env.VITE_APP_API_BASE_URL,
+        },
+      },
+    },
     root: '.',
   };
 });
