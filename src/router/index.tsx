@@ -17,16 +17,22 @@ const configs: Record<string, RouteConfig[]> = {
   _local: [...config, ...dev_config],
 };
 
+const joinUrl = (parent: string, child: string) => {
+  return `${parent.replace(/\/$/, '')}/${child.replace(/^\//, '')}`.replace(/\/+$/, '') || '/';
+};
+
 const convertRoutes = (routes: RouteConfig[], parentRouteUrl = '/'): RouteObject[] =>
   routes.flatMap((route) => {
-    const _route_url = `${parentRouteUrl}${route.url}`;
+    const _route_url = joinUrl(parentRouteUrl, route.url);
+
     let _file_path = `/src/app${route.path}.tsx`;
     if (route.asFolder) {
-      _file_path = _file_path.replace(/\.tsx$/, 'index.tsx');
+      _file_path = _file_path.replace(/\.tsx$/, '/index.tsx'); // ← 슬래시 추가
     }
+
     const importer = modules[_file_path];
     if (!importer) {
-      console.error('모듈을 못찾겠음');
+      console.error('모듈을 못찾겠음', _file_path);
       return [];
     }
 
@@ -36,3 +42,5 @@ const convertRoutes = (routes: RouteConfig[], parentRouteUrl = '/'): RouteObject
 
     return [_route, ..._children];
   });
+
+export const routes = convertRoutes(configs[mode]);

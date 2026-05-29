@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "url": "",
+    "path": "/pages/Home",
+    "asFolder": true,
+    "children": [{ "url": "/insu", "path": "/pages/insu" }]
+  }
+]

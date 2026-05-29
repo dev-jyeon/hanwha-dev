@@ -1,0 +1,1 @@
+{"root":["./app.tsx","./globalloader.tsx","./vite.config.ts","./src/vite-env.d.ts","./src/api/api.ts","./src/api/apiclient.ts","./src/api/fetcher.ts","./src/hook/usecommoncode.ts","./src/hook/useloading.ts","./src/router/index.tsx"],"version":"5.8.3"}
